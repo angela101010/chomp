@@ -119,7 +119,16 @@ public class CharMatrix
     }
 
     public void display () {
-        
+        for(int r=0; r < numRows(); r++){
+            for(int c=0; c< numCols(); c++){
+                if(c<numCols()-1){
+                  System.out.print(m[r][c]+" ");  
+                } else {
+                    System.out.println(m[r][c]+" ");
+                }
+            }
+            
+        }
 
     }
 
@@ -130,8 +139,12 @@ public class CharMatrix
         System.out.println(ans);
         matrix.display();
         //testing clearRect
+        System.out.println(" ");
         matrix.clearRect(1,2,2,3);
         matrix.display();
+        //testing countInRow
+        //int ans = matrix.countInRow(1);
+        //System.out.println(ans);
     }
 
 }
